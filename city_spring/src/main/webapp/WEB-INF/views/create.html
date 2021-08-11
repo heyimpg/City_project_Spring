@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thêm mới thành phố</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+
+    <!--Css-->
+    <link rel="stylesheet" href="/Asset/css/create-css.css">
+</head>
+<body>
+
+
+
+<div class="bg">
+    <head>
+        <!-- Tiêu đề -->
+        <h2 class="title-city">Thêm thành phố</h2>
+        <!-- Message-->
+        <h4 class="title-city" th:if="${message != null}" th:text="${message}">  </h4>
+    </head>
+    <!-- phần chứa bảng -->
+    <div class="container-fluid">
+        <div class="field-input">
+            <!-- table -->
+            <form method="POST" role="form" th:object="${city}" th:action="@{/create-city}">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>Tên</h4>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Nhập tên thành phố" th:field="*{name}" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>Quốc gia</h4>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <input type="text" class="form-control" placeholder="Nhập tên quốc gia" th:field="*{country}" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>Diện tích</h4>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Nhập diện tích" th:field="*{area}" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>Dân số</h4>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Nhập dân số" th:field="*{population}" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>GDP</h4>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input type="text" class="form-control" placeholder="Nhập GDP" th:field="*{gdp}" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>Giới thiệu</h4>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <textarea class="form-control" placeholder="Thêm giới thiệu về thành phố của bạn" id="floatingTextarea2" rows="4" th:field="*{instruction}"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <center>
+                        <button type="submit" class="btn btn-primary" >Đồng ý</button>
+                        <button class="btn btn-default" ><a th:href="@{/cities}">Thoát</a></button>
+                    </center>
+                </div>
+            </form>
+        </div>
+        <!--Paging-->
+    </div>
+</div>
+</body>
+</html>

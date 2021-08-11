@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Xem thành phố</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+
+    <!--Css-->
+    <link rel="stylesheet" href="/Asset/css/detail-css.css">
+</head>
+<body>
+
+
+<div class="bg">
+    <head>
+        <!-- Tiêu đề -->
+        <h2 class="title-city">Xem thành phố</h2>
+        <!-- navigation -->
+    </head>
+    <!-- phần chứa bảng -->
+
+
+    <div class="container-fluid">
+        <div class="field-input">
+            <div>
+                <h4 style="text-align: inherit;"> Tên TP: <span th:text="${city_detail.name}"></span> </h4>
+            </div>
+            <div>
+                <h4 style="text-align: inherit;"> Quốc gia: <span th:text="${city_detail.country}"></span> </h4>
+            </div>
+            <div>
+                <h4 style="text-align: inherit;"> Diện tích: <span th:text="${city_detail.area}"></span> </h4>
+            </div>
+            <div>
+                <h4 style="text-align: inherit;"> Dân số: <span th:text="${city_detail.population}"></span> </h4>
+            </div>
+            <div>
+                <h4 style="text-align: inherit;"> GDP: <span th:text="${city_detail.gdp}"></span> </h4>
+            </div>
+            <br>
+            <div>
+                <h4 style="text-align: inherit;"> Giới thiệu:</h4>
+                <h4 style="text-align: inherit;" th:text="${city_detail.instruction}"></h4>
+            </div>
+        </div>
+        <!-- Paging -->
+        <div class="paging">
+            <button type="button" class="btn btn-default"><a th:href="@{/cities}">Xong</a></button>
+        </div>
+    </div>
+
+    <!-- <div class="overlay">
+    </div> -->
+</div>
+
+</body>
+</html>

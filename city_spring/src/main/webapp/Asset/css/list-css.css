@@ -1,0 +1,91 @@
+body
+{
+
+	/*background-color: red;*/
+	background-image: 	url(../image/my-city.jpg);
+}
+
+/*Làm mờ background*/
+.bg
+{
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+/*Phần chứa bảng*/
+.container-fluid
+{
+	width: 800px;
+	height: 400px;
+	margin: 20px auto;
+	background-color: #FEA0A0;
+	border-radius: 5px;
+
+}
+.field-table
+{
+	height: 300px;
+}
+.container-fluid table
+{
+	margin-top: 30px;
+}
+/*Phần phân trang*/
+.paging
+{
+	float: right;
+}
+
+/*Chỉnh bảng*/
+.table-hover>tbody>tr:hover {
+    background-color: #78EF8E;
+}
+
+table tr td
+{
+	border: 1px solid #0C0C0C;
+}
+
+table td, th
+{
+	text-align: center;
+}
+
+/*header*/
+.title-city
+{
+	color: white;
+	text-align: center;
+}
+
+/*Chỉnh lại nav*/
+.nav
+{
+	
+	width: 800px;
+	margin: 30px auto;
+}
+
+.form-control
+{
+	float: left;
+	width: 60%;
+	margin-left: 100px;
+}
+.nav button.btn
+{
+	float: right;
+	margin-right: 20px;
+}
+.nav button.btnOption
+{
+	height: 40px;
+}
+
+
